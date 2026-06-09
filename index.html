@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>干部职工工资查询系统 v4.4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h2>干部职工工资查询系统 v4.4</h2>
+        <div class="subtitle">XOR加密 · 全部详表按原始顺序显示所有项目</div>
+    </div>
+    <div id="queryTab" class="tab-content active">
+        <div class="box"><label>姓名</label><input id="name" placeholder="请输入姓名" autocomplete="off"></div>
+        <div class="box"><label>查询代码</label><input type="password" id="pwd" placeholder="请输入6位查询代码" maxlength="6"><span class="tip">代码为本人专属查询凭证</span></div>
+        <button onclick="chk()">查询</button>
+        <div class="btn-group">
+            <button class="btn-secondary" onclick="printSalary()">🖨️ 打印工资单</button>
+            <button class="btn-secondary" onclick="showAllMonthsDetail()">📄 打印全部详表</button>
+        </div>
+        <div id="monthBox" class="month-box"></div>
+        <div id="res"></div>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
